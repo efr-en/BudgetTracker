@@ -1,6 +1,14 @@
-body {
-    background-color: aqua;
+$primary-color: #4caf50;
+$text-color: black;
+$gradient-start: #000fff;
+$gradient-end: #ff0000;
+
+@mixin gradient($color1, $color2) {
+    background: linear-gradient(right, )
 }
-h1 {
-    font-size: large;
-}
+// body {
+//     background-color: aqua;
+// }
+// h1 {
+//     font-size: large;
+// }

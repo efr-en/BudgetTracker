@@ -22,6 +22,24 @@
             </div>
         </section>
 
+        <section class="inputs">
+            <h3>Add Income/Expense</h3>
+            <form id="transaction-form">
+                <input type="text" id="description" placeholder="Description" required/>
+                <input type="number" id="amount" placeholder="Amount" required/>
+                <select id="type">
+                    <option value="income">Income</option>
+                    <option value="expense">Expense</option>
+                </select>
+                <button type="submit">Add to budget</button>
+            </form>
+        </section>
+
+        <section class="transaction-list">
+            <h3>Transaction History</h3>
+            <ul id="transactions"></ul>
+        </section>
+
     </main>
     <script src="/js/script.js"></script>
 </body>
