@@ -1,11 +1,78 @@
 $primary-color: #4caf50;
 $text-color: black;
-$gradient-start: #000fff;
-$gradient-end: #ff0000;
+$gradient-start: #0088ff;
+$gradient-end: #e7f5f9;
 
 @mixin gradient($color1, $color2) {
-    background: linear-gradient(right, )
+    background: linear-gradient(to bottom, $color1, $color2);
 }
+
+body {
+    @include gradient($gradient-start, $gradient-end);
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    padding: 0;
+    color: $text-color;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+    padding: 16px;
+    background-color: white;
+    box-shadow: 4px 4px 10px black;
+    border-radius: 10px;
+}
+
+.header {
+    text-align: center;
+    padding-bottom: 16px;
+    border-bottom: 2px solid $primary-color;
+}
+
+.inputs, .transaction-list, .budget-summary {
+    margin-bottom: 26px;
+}
+
+h1, h2, h3 {
+    color: $primary-color;
+    margin: 0 0 20px;
+}
+
+button {
+    background-color: $primary-color;
+    color: white;
+    border: none;
+    width: 100%;
+    padding: 8px 5px;
+    border-radius: 6px;
+    cursor: pointer;
+    &:hover {
+        background-color: darkgreen;
+    }
+}
+
+#transcation-form input, #transaction-form select {
+    border: 1px solid red;
+    width: 100%;
+    margin-bottom: 16px;
+    padding: 6px;
+}
+
+.transaction-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.transaction-list li {
+    background-color: gray;
+    padding: 16px;
+}
+
 // body {
 //     background-color: aqua;
 // }

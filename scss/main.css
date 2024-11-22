@@ -1,1 +1,65 @@
-/*# sourceMappingURL=main.css.map */
+body {
+  background: linear-gradient(to bottom, #0088ff, #e7f5f9);
+  font-family: "Courier New", Courier, monospace;
+  margin: 0;
+  padding: 0;
+  color: black;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 600px;
+  padding: 16px;
+  background-color: white;
+  box-shadow: 4px 4px 10px black;
+  border-radius: 10px;
+}
+
+.header {
+  text-align: center;
+  padding-bottom: 16px;
+  border-bottom: 2px solid #4caf50;
+}
+
+.inputs, .transaction-list, .budget-summary {
+  margin-bottom: 26px;
+}
+
+h1, h2, h3 {
+  color: #4caf50;
+  margin: 0 0 20px;
+}
+
+button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  width: 100%;
+  padding: 8px 5px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+button:hover {
+  background-color: darkgreen;
+}
+
+#transcation-form input, #transaction-form select {
+  border: 1px solid red;
+  width: 100%;
+  margin-bottom: 16px;
+  padding: 6px;
+}
+
+.transaction-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.transaction-list li {
+  background-color: gray;
+  padding: 16px;
+}/*# sourceMappingURL=main.css.map */
