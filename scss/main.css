@@ -1,10 +1,10 @@
 body {
   background: linear-gradient(to bottom, #0088ff, #e7f5f9);
   font-family: "Courier New", Courier, monospace;
-  margin: 0;
+  margin: 70px 0;
   padding: 0;
   color: black;
-  height: 100vh;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -19,6 +19,22 @@ body {
   border-radius: 10px;
 }
 
+canvas #budgetchart {
+  max-height: 400px;
+  max-width: 400px;
+}
+
+.budget-summary {
+  text-align: center;
+}
+
+.budget-chart canvas {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  margin: 0 auto;
+}
+
 .header {
   text-align: center;
   padding-bottom: 16px;
@@ -26,12 +42,12 @@ body {
 }
 
 .inputs, .transaction-list, .budget-summary {
-  margin-bottom: 26px;
+  margin-bottom: 16px;
 }
 
 h1, h2, h3 {
   color: #4caf50;
-  margin: 0 0 20px;
+  margin: 0 0 16px;
 }
 
 button {
@@ -39,7 +55,7 @@ button {
   color: white;
   border: none;
   width: 100%;
-  padding: 8px 5px;
+  padding: 16px;
   border-radius: 6px;
   cursor: pointer;
 }
@@ -48,10 +64,10 @@ button:hover {
 }
 
 #transcation-form input, #transaction-form select {
-  border: 1px solid red;
-  width: 100%;
+  border: 1px solid rgb(255, 0, 0);
+  width: calc(100% - 16px);
   margin-bottom: 16px;
-  padding: 6px;
+  padding: 8px;
 }
 
 .transaction-list ul {

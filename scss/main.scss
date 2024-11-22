@@ -2,6 +2,7 @@ $primary-color: #4caf50;
 $text-color: black;
 $gradient-start: #0088ff;
 $gradient-end: #e7f5f9;
+$spacing: 16px;
 
 @mixin gradient($color1, $color2) {
     background: linear-gradient(to bottom, $color1, $color2);
@@ -10,10 +11,10 @@ $gradient-end: #e7f5f9;
 body {
     @include gradient($gradient-start, $gradient-end);
     font-family: 'Courier New', Courier, monospace;
-    margin: 0;
+    margin: 70px 0;
     padding: 0;
     color: $text-color;
-    height: 100vh;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -22,25 +23,43 @@ body {
 .container {
     width: 100%;
     max-width: 600px;
-    padding: 16px;
+    padding: $spacing;
     background-color: white;
     box-shadow: 4px 4px 10px black;
     border-radius: 10px;
 }
 
+canvas #budgetchart {
+    max-height: 400px;
+    max-width: 400px;
+}
+
+.budget-summary {
+    text-align: center;
+}
+
+.budget-chart {
+    canvas {
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+        margin: 0 auto;
+    }
+}
+
 .header {
     text-align: center;
-    padding-bottom: 16px;
+    padding-bottom: $spacing;
     border-bottom: 2px solid $primary-color;
 }
 
 .inputs, .transaction-list, .budget-summary {
-    margin-bottom: 26px;
+    margin-bottom: $spacing;
 }
 
 h1, h2, h3 {
     color: $primary-color;
-    margin: 0 0 20px;
+    margin: 0 0 $spacing;
 }
 
 button {
@@ -48,7 +67,7 @@ button {
     color: white;
     border: none;
     width: 100%;
-    padding: 8px 5px;
+    padding: $spacing;
     border-radius: 6px;
     cursor: pointer;
     &:hover {
@@ -57,10 +76,10 @@ button {
 }
 
 #transcation-form input, #transaction-form select {
-    border: 1px solid red;
-    width: 100%;
-    margin-bottom: 16px;
-    padding: 6px;
+    border: 1px solid rgb(255, 0, 0);
+    width: calc(100% - $spacing);
+    margin-bottom: $spacing;
+    padding: 8px;
 }
 
 .transaction-list ul {
