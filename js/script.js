@@ -52,6 +52,9 @@ let budgetChart = new Chart(ctx, {
 function updateChart() {
     const income = budget.getTotalIncome();
     const expenses = budget.getTotalExpenses();
+
+    // Makes data appear on pie chart
+    budgetChart.data.datasets[0].data = [income, expenses];
     budgetChart.update();
 }
 
@@ -72,8 +75,9 @@ function updateUI() {
     totalIncomeEl.textContent = `$${income}`;
     totalExpensesEl.textContent = `$${expenses}`;
 
+    //"..." prevent undefined transaction errors
     transactionsEl.innerHTML = '';
-    [budget.incomes, budget.expenses].forEach((item) => {
+    [...budget.incomes, ...budget.expenses].forEach((item) => {
         const li = document.createElement('li');
         const isExpense = budget.expenses.includes(item);
         
@@ -83,5 +87,26 @@ function updateUI() {
     });
     updateChart();
 }
+
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const description = descriptionInput.value.trim();
+    const amount = parseFloat(amountInput.value.trim());
+    const type = typeInput.value;
+
+    if (!description || isNaN(amount)) {
+        alert('Please provide valid input only');
+        return;
+    }
+    if (type === 'income') {
+        budget.addIncome(description, amount);
+    } else {
+        budget.addExpense(description, amount);
+    }
+
+    form.reset();
+    updateUI();
+});
 
 // console.log()
