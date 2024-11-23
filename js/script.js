@@ -48,3 +48,40 @@ let budgetChart = new Chart(ctx, {
         ],
     },
 });
+
+function updateChart() {
+    const income = budget.getTotalIncome();
+    const expenses = budget.getTotalExpenses();
+    budgetChart.update();
+}
+
+function updateUI() {
+    const income = budget.getTotalIncome();
+    const expenses = budget.getTotalExpenses();
+    const totalBudget = budget.getTotalBudget();
+
+    if (totalBudget < 0) {
+        totalBudgetEl.textContent = "You're Over Budget!!";
+        totalBudgetEl.style.color = "#ff5722";
+    } else {
+        totalBudgetEl.textContent = `$${totalBudget}`;
+        totalBudgetEl.style.color = "#4caf50";
+    }
+
+    // Updates income/expense display
+    totalIncomeEl.textContent = `$${income}`;
+    totalExpensesEl.textContent = `$${expenses}`;
+
+    transactionsEl.innerHTML = '';
+    [budget.incomes, budget.expenses].forEach((item) => {
+        const li = document.createElement('li');
+        const isExpense = budget.expenses.includes(item);
+        
+        li.textContent = isExpense ? `${item.description}: -$${item.amount}` : `${item.description}: $${item.amount}`;
+        li.style.color = isExpense ? "#ff5722" : "#4caf50";
+        transactionsEl.appendChild(li);
+    });
+    updateChart();
+}
+
+// console.log()
