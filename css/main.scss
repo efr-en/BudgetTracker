@@ -1,20 +1,22 @@
+//SASS Variables
 $primary-color: #4caf50;
 $text-color: black;
-$gradient-start: #0088ff;
-$gradient-end: #e7f5f9;
+$gradient-start: #04abff;
+$gradient-end: #8efdc1;
 $spacing: 16px;
 
+//Mixin for gradient
 @mixin gradient($color1, $color2) {
     background: linear-gradient(to bottom, $color1, $color2);
 }
 
 body {
     @include gradient($gradient-start, $gradient-end);
-    font-family: 'Courier New', Courier, monospace;
+    font-family: "Arimo", sans-serif;
     margin: 70px 0;
     padding: 0;
     color: $text-color;
-    height: 100%;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -25,14 +27,15 @@ body {
     max-width: 600px;
     padding: $spacing;
     background-color: white;
-    box-shadow: 4px 4px 10px black;
+    border: 2px 2px 2px black;
+    // box-shadow: 4px 4px 10px black;
     border-radius: 10px;
 }
 
-canvas #budgetchart {
-    max-height: 400px;
-    max-width: 400px;
-}
+// canvas #budgetchart {
+//     max-height: 400px;
+//     max-width: 400px;
+// }
 
 .budget-summary {
     text-align: center;
@@ -57,7 +60,14 @@ canvas #budgetchart {
     margin-bottom: $spacing;
 }
 
+#description, #amount {
+    width: 90%;
+    padding: $spacing / 2;
+    margin: $spacing / 3 0 ;
+}
+
 h1, h2, h3 {
+    text-align: center;
     color: $primary-color;
     margin: 0 0 $spacing;
 }
@@ -76,7 +86,7 @@ button {
 }
 
 #transcation-form input, #transaction-form select {
-    border: 1px solid rgb(255, 0, 0);
+    border: 1px solid rgb(147, 146, 146);
     width: calc(100% - $spacing);
     margin-bottom: $spacing;
     padding: 8px;
@@ -88,8 +98,10 @@ button {
 }
 
 .transaction-list li {
-    background-color: gray;
+    background-color: rgb(235, 235, 235);
     padding: 16px;
+    border-radius: 6px;
+    border: 1px 1px 1px black;
 }
 
 // body {

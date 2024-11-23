@@ -1,10 +1,10 @@
 body {
-  background: linear-gradient(to bottom, #0088ff, #e7f5f9);
-  font-family: "Courier New", Courier, monospace;
+  background: linear-gradient(to bottom, #04abff, #8efdc1);
+  font-family: "Arimo", sans-serif;
   margin: 70px 0;
   padding: 0;
   color: black;
-  height: 100%;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -15,13 +15,8 @@ body {
   max-width: 600px;
   padding: 16px;
   background-color: white;
-  box-shadow: 4px 4px 10px black;
+  border: 2px 2px 2px black;
   border-radius: 10px;
-}
-
-canvas #budgetchart {
-  max-height: 400px;
-  max-width: 400px;
 }
 
 .budget-summary {
@@ -45,7 +40,14 @@ canvas #budgetchart {
   margin-bottom: 16px;
 }
 
+#description, #amount {
+  width: 90%;
+  padding: 8px;
+  margin: 5.3333333333px 0;
+}
+
 h1, h2, h3 {
+  text-align: center;
   color: #4caf50;
   margin: 0 0 16px;
 }
@@ -64,7 +66,7 @@ button:hover {
 }
 
 #transcation-form input, #transaction-form select {
-  border: 1px solid rgb(255, 0, 0);
+  border: 1px solid rgb(147, 146, 146);
   width: calc(100% - 16px);
   margin-bottom: 16px;
   padding: 8px;
@@ -76,6 +78,8 @@ button:hover {
 }
 
 .transaction-list li {
-  background-color: gray;
+  background-color: rgb(235, 235, 235);
   padding: 16px;
+  border-radius: 6px;
+  border: 1px 1px 1px black;
 }/*# sourceMappingURL=main.css.map */

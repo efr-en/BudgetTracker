@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Budget Tracker</title>
-    <link rel="stylesheet" href="/scss/main.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
 
 </head>
 <body>
@@ -18,19 +21,21 @@
             <canvas id="budgetChart"></canvas>
         </section>
 
+        <!--Total Budget/Income/Expenses-->
         <section class="budget-summary">
             <h2>Total Budget Available</h2>
             <p id="total-budget">$0</p>
             <div>
-                <p>Income: <span id="total-income">$0</span></p>
-                <p>Expenses: <span id="total-expenses">$0</span></p>
+                <p>Total Income: <span id="total-income">$0</span></p>
+                <p>Total Expenses: <span id="total-expenses">$0</span></p>
             </div>
         </section>
 
+        <!--Adding Income/Expense Field-->
         <section class="inputs">
             <h3>Add Income/Expense</h3>
             <form id="transaction-form">
-                <input type="text" id="description" placeholder="Description" required/>
+                <input type="text" id="description" placeholder="Description of Transaction" required/>
                 <input type="number" id="amount" placeholder="Amount" required/>
                 <select id="type">
                     <option value="income">Income</option>
