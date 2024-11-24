@@ -80,7 +80,7 @@ function updateUI() {
     totalIncomeEl.textContent = `$${income}`;
     totalExpensesEl.textContent = `$${expenses}`;
 
-    //"..." prevent undefined transaction errors
+    //"..." spread operator to merge two arrays, combines income/expense array to display transactions together
     transactionsEl.innerHTML = '';
     [...budget.incomes, ...budget.expenses].forEach((item) => {
         const li = document.createElement('li');
