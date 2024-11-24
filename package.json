@@ -3,10 +3,14 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "watch": "npx sass --watch css/main.scss:css/main.css",
+    "build": "sass css/main.scss css/main.css"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "devDependencies": {
+    "sass": "^1.81.0"
+  }
 }
