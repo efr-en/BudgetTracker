@@ -1,0 +1,92 @@
+body {
+  background: linear-gradient(to bottom, #04abff, #8efdc1);
+  font-family: "Arimo", sans-serif;
+  margin: 70px 0;
+  padding: 0;
+  color: black;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 100%;
+  margin: 0px 8px;
+  max-width: 600px;
+  padding: 16px;
+  background-color: white;
+  border: 2px 2px 2px black;
+  border-radius: 10px;
+}
+
+.budget-summary {
+  text-align: center;
+}
+
+.budget-chart canvas {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+  padding-bottom: 16px;
+  border-bottom: 2px solid #4caf50;
+}
+
+.inputs, .transaction-list, .budget-summary {
+  margin-bottom: 16px;
+}
+
+#description, #amount {
+  width: 90%;
+  padding: 8px;
+  margin: 5.3333333333px 0;
+}
+
+h1, h2, h3 {
+  text-align: center;
+  color: #4caf50;
+  margin: 0 0 16px;
+}
+
+h3 {
+  padding-top: 16px;
+}
+
+button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  width: 100%;
+  padding: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+button:hover {
+  background-color: darkgreen;
+}
+
+#transcation-form input, #transaction-form select {
+  border: 1px solid rgb(147, 146, 146);
+  width: calc(100% - 40px);
+  border-radius: 3px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  padding: 8px;
+}
+
+.transaction-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.transaction-list li {
+  background-color: rgb(235, 235, 235);
+  padding: 12px;
+  margin: 1px;
+  border-radius: 6px;
+}/*# sourceMappingURL=main.css.map */
