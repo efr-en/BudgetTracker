@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "watch": "npx sass --watch css/main.scss:css/main.css",
-    "build": "sass css/main.scss css/main.css"
+    "build": "sass scss/main.scss dist/main.css"
   },
   "keywords": [],
   "author": "",
