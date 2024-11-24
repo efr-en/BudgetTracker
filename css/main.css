@@ -12,6 +12,7 @@ body {
 
 .container {
   width: 100%;
+  margin: 0px 8px;
   max-width: 600px;
   padding: 16px;
   background-color: white;
@@ -52,6 +53,10 @@ h1, h2, h3 {
   margin: 0 0 16px;
 }
 
+h3 {
+  padding-top: 16px;
+}
+
 button {
   background-color: #4caf50;
   color: white;
@@ -67,8 +72,10 @@ button:hover {
 
 #transcation-form input, #transaction-form select {
   border: 1px solid rgb(147, 146, 146);
-  width: calc(100% - 16px);
-  margin-bottom: 16px;
+  width: calc(100% - 40px);
+  border-radius: 3px;
+  margin-top: 8px;
+  margin-bottom: 8px;
   padding: 8px;
 }
 
@@ -79,7 +86,7 @@ button:hover {
 
 .transaction-list li {
   background-color: rgb(235, 235, 235);
-  padding: 16px;
+  padding: 12px;
+  margin: 1px;
   border-radius: 6px;
-  border: 1px 1px 1px black;
 }/*# sourceMappingURL=main.css.map */

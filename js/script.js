@@ -8,6 +8,7 @@ const descriptionInput = document.getElementById('description');
 const amountInput = document.getElementById('amount');
 const typeInput = document.getElementById('type');
 
+// Budget class to manage income/expenses and stores an array for both objects with desc. & amount
 class Budget {
     constructor() {
         this.incomes = [];
@@ -30,9 +31,10 @@ class Budget {
     }
 }
 
+// Creates an instance of the Budget class above
 const budget = new Budget();
 
-//Pie chart initialization from chart.js
+// Pie chart initialization from chart.js
 const ctx = document.getElementById('budgetChart').getContext('2d');
 let budgetChart = new Chart(ctx, {
     type: 'pie',
@@ -49,6 +51,7 @@ let budgetChart = new Chart(ctx, {
     },
 });
 
+// Func. to update the chart data
 function updateChart() {
     const income = budget.getTotalIncome();
     const expenses = budget.getTotalExpenses();
@@ -58,11 +61,13 @@ function updateChart() {
     budgetChart.update();
 }
 
+// Func. to update the user interface with the latest data
 function updateUI() {
     const income = budget.getTotalIncome();
     const expenses = budget.getTotalExpenses();
     const totalBudget = budget.getTotalBudget();
 
+    // Warning for being over budget in red, within budget in green
     if (totalBudget < 0) {
         totalBudgetEl.textContent = "You're Over Budget!!";
         totalBudgetEl.style.color = "#ff5722";
@@ -88,6 +93,7 @@ function updateUI() {
     updateChart();
 }
 
+// Event listener to add transactions on submission
 form.addEventListener('submit', (e) => {
     e.preventDefault();
 
@@ -95,10 +101,11 @@ form.addEventListener('submit', (e) => {
     const amount = parseFloat(amountInput.value.trim());
     const type = typeInput.value;
 
+    // Input validation
     if (!description || isNaN(amount)) {
         alert('Please provide valid input only');
         return;
-    }
+    } // Adds transaction to it's appropriate array
     if (type === 'income') {
         budget.addIncome(description, amount);
     } else {
