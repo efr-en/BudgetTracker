@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "watch": "npx sass --watch scss/main.scss:dist/main.css",
-    "build": "sass scss/main.scss dist/main.css"
+    "watch": "npx sass --watch scss/main.scss:scss/main.css",
+    "build": "sass scss/main.scss scss/main.css"
   },
   "keywords": [],
   "author": "",
